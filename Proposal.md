@@ -13,7 +13,11 @@ When you open the page you will be asked to sign up or login. Afterward if the u
 
 
 Daily Goals:
+
 Week 1;
+
+Work on creating a page
+
 Tuesday: 
 
   Get a basic landing page with planned placements of everything
@@ -33,6 +37,9 @@ Friday:
   
   
 Week 2
+
+Create Datatable with users and sign in page
+
 Monday:
   
 Tuesday:
@@ -43,3 +50,21 @@ Thursday:
   
 Friday:
   
+Week 3
+
+Finish landing page and begin on edit
+
+Week 4
+
+Finish edit and create delete
+
+
+Week 5
+
+Fix any bugs and polish design
+
+
+
+
+
+
