@@ -15,15 +15,19 @@ When you open the page you will be asked to sign up or login. Afterward if the u
 Daily Goals:
 Week 1;
 Tuesday: 
+
   Get a basic landing page with planned placements of everything
   
 Wednesday:
+
   Get basic interaction to create
   
 Thursday:
+
   Get more complex interaction to create
   
 Friday:
+
   Get where they can create a world completely
   
   
