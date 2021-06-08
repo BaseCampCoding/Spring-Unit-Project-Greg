@@ -52,7 +52,7 @@ Friday:
   
 Week 3
 
-Finish landing page and begin on edit
+Finish landing page and begin on edit world
 
 Week 4
 
