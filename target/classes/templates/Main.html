@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link rel="stylesheet" href="Main.css">
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div id = "title">
+    <h1 class = "title">Worldify</h1>
+</div>
+<div id = "placeholder">
+    <a th:href="@{/users}" class="login">Users</a>
+    <a th:href="@{/Signup}" class="signup">Sign Up</a>
+    <a th:href="@{/login}" class="users">Login</a>
+</div>
+<div id = "center">
+    <div id = "usage" class = "boxes">
+        <h2> Objective </h2>
+        <h3>You will create your own RPG world along with editing and deleting them</h3>
+    </div>
+        <div id = "create" class = "boxes">
+            <a th:href="@{/create}" id = "link">
+                <h1>Create a game</h1>
+            </a>
+        </div>
+</div>
+</body>
+</html>
