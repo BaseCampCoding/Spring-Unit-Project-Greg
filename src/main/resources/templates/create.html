@@ -1,59 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Create</title>
   <link rel="stylesheet" href="Create.css">
-  <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
-  <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
-  <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
-<body style="background: #aa4b6b;
-background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
-background: linear-gradient(to top right, #3b8d99, #6b6b83, #aa4b6b); height:100vh;">
-<div class="container text-center">
-  <div>
-    <h1>World Creation</h1>
-  </div>
-  <form th:action="@{/process_register}" th:object="${user}"
-        method="post" style="max-width: 600px; margin: 0 auto;">
-    <div class="m-3">
-      <div class="form-group row">
-        <label class="col-4 col-form-label">World Title </label>
-        <div class="col-8">
-          <input type="Title" th:field="*{title}" class="form-control" required />
-        </div>
-      </div>
+<body>
 
-      <div class="form-group row">
-        <label class="col-4 col-form-label">Password: </label>
-        <div class="col-8">
-          <input type="password" th:field="*{password}" class="form-control"
-                 required minlength="6" maxlength="10"/>
-        </div>
-      </div>
-
-      <div class="form-group row">
-        <label class="col-4 col-form-label">First Name: </label>
-        <div class="col-8">
-          <input type="text" th:field="*{firstName}" class="form-control"
-                 required minlength="2" maxlength="20"/>
-        </div>
-      </div>
-
-      <div class="form-group row">
-        <label class="col-4 col-form-label">Last Name: </label>
-        <div class="col-8">
-          <input type="text" th:field="*{lastName}" class="form-control"
-                 required minlength="2" maxlength="20" />
-        </div>
-      </div>
-
-      <div>
-        <button type="submit" class="btn btn-primary">Sign Up</button>
-      </div>
-    </div>
-  </form>
-</div>
 </body>
 </html>
