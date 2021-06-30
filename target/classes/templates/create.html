@@ -1,11 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html  xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <title>Create</title>
   <link rel="stylesheet" href="Create.css">
 </head>
 <body>
-
+  <div id = "WT">
+    <form th:action="@{/create}" th:object="${worlds}"
+          method="post" >
+      <div class="m-3">
+        <div class="form-group row">
+          <label class="col-form-label">World title </label>
+            <input id = "worldT" type="world_title" th:field="${world_title}" class="form-control" required />
+        </div>
+      </div>
+    </form>
+  </div>
+  <div id = "enemies">
+      <div id = "Minion_1">
+        <form th:action="@{/create}" th:object="${worlds}"
+              method="post">
+          <div class="m-3">
+            <div class="form-group row">
+              <label class="col-4 col-form-label">Minion 1 Name</label>
+                <input type="world_title" th:field="${min1n}" class="form-control" required />
+            </div>
+          </div>
+        </form>
+      </div>
+    <div id = "Minion_2">
+      <form th:action="@{/create}" th:object="${worlds}"
+            method="post">
+        <div class="m-3">
+          <div class="form-group row">
+            <label class="col-4 col-form-label">Minion 2 Name </label>
+              <input type="world_title" th:field="${world_title}" class="form-control" required />
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id = "Boss">
+      <form th:action="@{/create}" th:object="${worlds}"
+            method="post">
+        <div class="m-3">
+          <div class="form-group row">
+            <label class="col-4 col-form-label">Boss Name </label>
+              <input type="world_title" th:field="${world_title}" class="form-control" required />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
