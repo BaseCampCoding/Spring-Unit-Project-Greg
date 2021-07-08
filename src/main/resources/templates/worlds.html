@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>List Worlds</title>
+  <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="worlds.css">
+  <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="text-center">
+    <div id="placeholder">
+      <h1>List of Worlds</h1>
+      <a th:href="@{/Main}">Go Home</a>
+      <form th:action="@{/logout}" method="post" id = "signout">
+        <input style="border:none; background:white;" type="submit" value="Sign Out" />
+      </form>
+    </div>
+    <div id="Page">
+    <div th:each="world: ${listWorlds}" id = "content">
+      <p>World Title: <span th:text="${world.World_title}"></span></p>
+      <!--Minion 1-->
+      <p>Minion 1 Name: <span th:text="${world.Minion1Name}"></span></p>
+      <p>Minion 1 health: <span th:text="${world.Minion1health}"></span></p>
+      <p>Minion 1 Weapon: <span th:text="${world.Minion1weapon}"></span></p>
+      <p>Minion 1 Damage: <span th:text="${world.Minion1wd}"></span></p>
+      <!-- Minion 2-->
+      <p>Minion 2 Name: <span th:text="${world.Minion2Name}"></span></p>
+      <p>Minion 2 health: <span th:text="${world.Minion2health}"></span></p>
+      <p>Minion 2 Weapon: <span th:text="${world.Minion2weapon}"></span></p>
+      <p>Minion 2 Damage: <span th:text="${world.Minion2wd}"></span></p>
+      <!--Boss-->
+      <p>Boss Name: <span th:text="${world.BossName}"></span></p>
+      <p>Boss health: <span th:text="${world.Bosshealth}"></span></p>
+      <p>Boss Weapon: <span th:text="${world.Bossweapon}"></span></p>
+      <p>Boss Damage: <span th:text="${world.Bosswd}"></span></p>
+      <!--Extra-->
+      <p>Enemy Types: <span th:text="${world.Enemy_Type}"></span></p>
+      <p>Time: <span th:text="${world.Time}"></span></p>
+      <p>Town: <span th:text="${world.Town}"></span></p>
+        </div>
+  </div>
+</div>
+</body>
+</html>

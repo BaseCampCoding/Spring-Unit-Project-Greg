@@ -4,12 +4,14 @@
   <meta charset="ISO-8859-1">
   <title>Sign Up</title>
   <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="Sign.css"/>
   <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
-<body style="background: #aa4b6b;
-background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
-background: linear-gradient(to top right, #3b8d99, #6b6b83, #aa4b6b); height:100vh;">
+<body>
+<div id="Login">
+  <a th:href="@{/login}" class="login">Login</a>
+</div>
 <div class="container text-center">
   <div>
     <h1>User Registration - Sign Up</h1>

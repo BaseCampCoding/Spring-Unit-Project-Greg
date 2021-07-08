@@ -23,8 +23,6 @@ public class World_StateRepoTests {
     @Test
     public void testCreateWorld() {
         World_state world = new World_state();
-        world.setWorldid(0);
-        world.setEmail("Default@gmail.com");
         world.setWorld_title("default");
         world.setMinion1Name("DefaultM1");
         world.setMinion1health(100);
@@ -46,7 +44,7 @@ public class World_StateRepoTests {
 
         World_state existWorld = entityManager.find(World_state.class, savedWorld.getId());
 
-        assertThat(world.getEmail()).isEqualTo(existWorld.getEmail());
+        assertThat(world.getId()).isEqualTo(existWorld.getId());
 
     }
 }

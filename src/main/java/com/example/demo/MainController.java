@@ -4,22 +4,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class MainController {
     @Autowired
     private UserRepository userRepo;
 
-    @GetMapping("")
+    @Autowired
+    private World_StateRepo worldRepo;
+
+    @GetMapping("/Main")
     public String homepage(){
         return "Main";
     }
 
-    @GetMapping("/Signup")
+    @GetMapping("")
     public String showRegistrationForm(Model model) {
         model.addAttribute("user", new User());
         return "signup_form";
@@ -34,16 +40,23 @@ public class MainController {
 
         return "register_success";
     }
-    @GetMapping("/users")
-    public String listUsers(Model model) {
-        List<User> listUsers = userRepo.findAll();
-        model.addAttribute("listUsers", listUsers);
-
-        return "users";
+    @GetMapping("/worlds")
+    public String listWorlds(Model model) {
+        List<World_state> listWorlds = worldRepo.findAll();
+        model.addAttribute("listWorlds", listWorlds);
+        return "worlds";
     }
     @GetMapping("/create")
     public String Create(Model model){
+        model.addAttribute("worlds", new World_state());
         return "create";
     }
+    @PostMapping("/process_create")
+    public String processCreate(World_state world_state){
+        worldRepo.save(world_state);
+        return "process_create";
+    }
+
+
 
 }

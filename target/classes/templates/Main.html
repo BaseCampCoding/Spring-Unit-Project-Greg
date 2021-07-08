@@ -12,9 +12,10 @@
     <h1 class = "title">Worldify</h1>
 </div>
 <div id = "placeholder">
-    <a th:href="@{/users}" class="login">Users</a>
-    <a th:href="@{/Signup}" class="signup">Sign Up</a>
-    <a th:href="@{/login}" class="users">Login</a>
+    <a th:href="@{/worlds}" class="login">Worlds</a>
+    <form th:action="@{/logout}" method="post" id = "signout">
+        <input style="border:none; background:white;" type="submit" value="Sign Out" />
+    </form>
 </div>
 <div id = "center">
     <div id = "usage" class = "boxes">

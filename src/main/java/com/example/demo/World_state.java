@@ -10,58 +10,52 @@ public class World_state {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(nullable = false)
-    private int Worldid;
-
-    @Column(nullable = false, unique = true, length = 45)
-    private String email;
-
-    @Column(name = "World_title", nullable = false, unique = true, length = 45)
+    @Column(name = "World_title", nullable = false, unique = true)
     private String World_title;
 
-    @Column(name = "min1N", nullable = false, length = 64)
+    @Column(name = "min1Name", nullable = false)
     private String Minion1Name;
 
-    @Column(name = "min2N", nullable = false, length = 20)
+    @Column(name = "min2Name", nullable = false)
     private String Minion2Name;
 
-    @Column(name = "min1H", nullable = false, length = 64)
+    @Column(name = "min1Health", nullable = false)
     private int Minion1health;
 
-    @Column(name = "min2H", nullable = false, length = 20)
+    @Column(name = "min2Health", nullable = false)
     private int Minion2health;
 
-    @Column(name = "min1WD", nullable = false, insertable = false, updatable = false , length = 64)
+    @Column(name = "min1Weapon", nullable = false)
     private String Minion1weapon;
 
-    @Column(name = "min2WD", nullable = false, insertable = false, updatable = false , length = 20)
+    @Column(name = "min2Weapon", nullable = false)
     private String Minion2weapon;
 
-    @Column(name = "min1WD", nullable = false)
+    @Column(name = "min1Damage", nullable = false)
     private int Minion1wd;
 
-    @Column(name = "min2WD", nullable = false)
+    @Column(name = "min2Damage", nullable = false)
     private int Minion2wd;
 
-    @Column(name = "bossName", nullable = false, length = 64)
+    @Column(name = "bossName", nullable = false)
     private String BossName;
 
-    @Column(name = "bossH", nullable = false, length = 64)
+    @Column(name = "bossHealth", nullable = false)
     private int Bosshealth;
 
-    @Column(name = "BossW", nullable = false, length = 64)
+    @Column(name = "BossWeapon", nullable = false)
     private String Bossweapon;
 
-    @Column(name = "bossWD", nullable = false, length = 64)
+    @Column(name = "bossDamage", nullable = false)
     private int Bosswd;
 
-    @Column(name = "Town", nullable = false, length = 20)
+    @Column(name = "Town", nullable = false)
     private String Town;
 
-    @Column(name = "Enemy_type", nullable = false, length = 100000)
+    @Column(name = "Enemy_type", nullable = false)
     private String Enemy_Type;
 
-    @Column(name = "Time", nullable = false, length = 20)
+    @Column(name = "Time", nullable = false)
     private int Time;
 
 
@@ -71,22 +65,6 @@ public class World_state {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public int getWorldid() {
-        return Worldid;
-    }
-
-    public void setWorldid(int worldid) {
-        Worldid = worldid;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getWorld_title() {
